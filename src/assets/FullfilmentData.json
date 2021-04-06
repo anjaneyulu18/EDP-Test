@@ -1,0 +1,25 @@
+{
+    "series": [
+        {
+            "name": "面积模式",
+            "type": "pie",
+            "radius": [50, 250],
+            "center": ["50%", "50%"],
+            "roseType": "area",
+            "itemStyle": {
+                "borderRadius": 8
+            },
+            "data": [
+                {"value": 40, "name": "Deeksha"},
+                {"value": 38, "name": "HSR"},
+                {"value": 32, "name": "Marthahalli"},
+                {"value": 30, "name": "Rajaji Nagar"},
+                {"value": 28, "name": "Silk bord"},
+                {"value": 26, "name": "KPHB"},
+                {"value": 22, "name": "Hi-Tech City"},
+                {"value": 18, "name": "MG Road"}
+            ]
+        }
+    ]
+    
+}

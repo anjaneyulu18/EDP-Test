@@ -1,0 +1,25 @@
+{
+
+    "series": [
+        {
+            "name": "面积模式",
+            "type": "pie",
+            "radius": [50, 250],
+            "center": ["50%", "50%"],
+            "roseType": "area",
+            "itemStyle": {
+                "borderRadius": 8
+            },
+            "data": [
+                {"value": 40, "name": "Deeksha"},
+                {"value": 38, "name": "New Horizan"},
+                {"value": 32, "name": "Oxferd"},
+                {"value": 30, "name": "Delhi Public School"},
+                {"value": 28, "name": "Hyd Public School"},
+                {"value": 26, "name": "Standford"},
+                {"value": 22, "name": "Deccan"},
+                {"value": 18, "name": "South Talented School"}
+            ]
+        }
+    ]
+}
