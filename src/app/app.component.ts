@@ -8,6 +8,7 @@ import { HttpClient } from "@angular/common/http"
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'VendorDashbord';
   flag: any
   sidenavWidth = 4;
@@ -38,6 +39,8 @@ export class AppComponent {
         title: {
           text: 'Revenue Data By Month'
         },
+
+        
         tooltip: {
           trigger: 'axis',
           axisPointer: {
@@ -75,6 +78,7 @@ export class AppComponent {
         ],
         series: yAxirArr.SeriesData
       };
+      
       // option2 ={
       //   tooltip: {
       //       trigger: 'axis',

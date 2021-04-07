@@ -51,32 +51,16 @@ font-size:17px;
     padding: 0 1px;
     color: rgb(88, 34, 34);
 }
-
-
-// .f-s{
-//     font-size:30px;
-// }
-//   .example-sidenav {
-//     user-select: none;
-//   }
-//   .full-width {
-//     width: 100%;
-//   }
-//   .menu-button {
-//     transition: 300ms ease-in-out;
-//     transform: rotate(0deg);
-//   }
-//   .menu-button.rotated {
-//     transform: rotate(180deg);
-//   }
-//   .submenu {
-//     overflow-y: hidden;
-//     transition: transform 300ms ease;
-//     transform: scaleY(0);
-//     transform-origin: top;
-//     padding-left: 30px;
-//   }
-//   .submenu.expanded {
-//     transform: scaleY(1);
-//   }
-  
+.btn-mdb-color {
+    color: #fff;
+    background-color: #0F3756 ;
+}
+.btn-outline-warnings {
+    color: #0F3756 !important;
+    background-color: transparent !important;
+    border: 2px solid #0F3756 !important;
+}
+.btnA {
+        height: 43px;
+        width: 118px;
+}

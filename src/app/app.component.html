@@ -103,23 +103,31 @@
         </mat-card>
       </div>
     </div>
-    <div style="margin-top: 25px;" class="row">
-      <div class="col-12 col-lg-8 col-xl-9">
-        <mat-card>
+    <div class="container-fluid">
+      <div style="margin-top: 25px;" class="row">
+      <div class="col-9 col-xs-9 col-md-9  col-lg-9 col-xl-9">
+        <mat-card style="height: 760px;">
           <h2>Main Taitle For The Visualisation</h2>
-          <div class="container-fluid" id="stackedChart" style="width:100%; height: 600px; display: block">
+          <div class="container-fluid">
+             <div class="row">
+               <div class="col-11">
+                 <div class="poss">
+                <div  class="container-fluid" id="stackedChart" style="width:100%; height: 600px; display: block">
 
+                </div>
+              </div>
+               </div>
+             </div>
           </div>
         </mat-card>
       </div>
-      <div class="col-12 col-lg-4 col-xl-3">
+      <div class="col-3 col-xs-3 col-md-3  col-lg-3 col-xl-3">
         <mat-card>
           <h3>  <span  class="material-icons" id="filter_alt" > filter_alt &nbsp;&nbsp; </span>Dimensions</h3>
           <mat-divider></mat-divider>
           <div class="container-fluid">
                
             <br>
-            <!-- <div class="container-fluid"> -->
                 
                   <mat-form-field appearance="outline">
                     <mat-label>Date&Time</mat-label>
@@ -185,11 +193,16 @@
                       {{Schools.value}}
                   </mat-option>
               </mat-select>
-          </mat-form-field> <br>
+          </mat-form-field> 
+          
                
-                <button mat-button class="mx-1">Clear </button>
-                <button mat-button class="">Apply</button>
+            <div class="row">
+              <div class="col-12">
+                <button mat-button class="btnA btn-outline-warnings mx-3">Clear </button>
+                <button mat-button class="btnA btn-mdb-color">Apply</button>
 
+              </div>
+            </div>
 
             <!-- </div> -->
 
@@ -198,6 +211,21 @@
         </mat-card>
       </div>
     </div>
+  </div>
+  </div>
+  <div style="margin-top: 20px;" class="container-fluid">
+    <div class="row">    
+      <div class="col-12 col-lg-5 col-xl-5">
+     <mat-card>
+       <h2>Main Taitle For The Visualisation</h2>
+     </mat-card>
+   </div>
+ 
+   <div class="col-12 col-lg-5 col-xl-5">
+     <mat-card>
+       <h2>Main Taitle For The Visualisation</h2>
+     </mat-card>
+   </div></div>  
   </div>
 <!-- </div> -->
 </mat-sidenav-container>
