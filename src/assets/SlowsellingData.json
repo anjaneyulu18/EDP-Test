@@ -1,105 +1,68 @@
 {
 
-    "xAxis":  [
+    "yAxis": {
+        "type": "category",
+        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    },    "series": [
         {
-            "type": "category",
-            "data": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"]
-        }
-    ],
-    "yAxis":  [
-        {
-            "type": 
-            "value"
-        }
-    ],
-    "series": [
-        {
-            "name": "Tabs",
+            "name": "Direct",
             "type": "bar",
+            "stack": "total",
+            "label": {
+                "show": true
+            },
             "emphasis": {
                 "focus": "series"
             },
-            "data": [320, 332, 301, 334, 390, 330, 320]
+            "data": [320, 302, 301, 334, 390, 330, 320]
         },
         {
-            "name": "bags",
+            "name": "Mail Ad",
             "type": "bar",
-            "stack": "广告",
+            "stack": "total",
+            "label": {
+                "show": true
+            },
             "emphasis": {
                 "focus": "series"
             },
             "data": [120, 132, 101, 134, 90, 230, 210]
         },
         {
-            "name": "belts",
+            "name":"Affiliate Ad",
             "type": "bar",
-            "stack": "广告",
+            "stack": "total",
+            "label": {
+                "show": true
+            },
             "emphasis": {
                 "focus": "series"
             },
             "data": [220, 182, 191, 234, 290, 330, 310]
         },
         {
-            "name": "Shirts",
+            "name": "?Video Ad",
             "type": "bar",
-            "stack": "广告",
+            "stack": "total",
+            "label": {
+                "show": true
+            },
             "emphasis": {
                 "focus": "series"
             },
-            "data": [150, 232, 201, 154, 190, 330, 410]
+            "data": [150, 212, 201, 154, 190, 330, 410]
         },
         {
-            "name": "T-Shirts",
+            "name": "Search Engine",
             "type": "bar",
-            "data": [862, 1018, 964, 1026, 1679, 1600, 1570],
+            "stack": "total",
+            "label": {
+                "show": true
+            },
             "emphasis": {
                 "focus": "series"
             },
-            "markLine": {
-                "lineStyle": {
-                    "type": "dashed"
-                },
-                "data": [
-                    [{"type": "min"}, {"type": "max"}]
-                ]
-            }
-        },
-        {
-            "name": "Shoes",
-            "type": "bar",
-            "barWidth": 5,
-            "stack": "搜索引擎",
-            "emphasis": {
-                "focus": "series"
-            },
-            "data": [620, 732, 701, 734, 1090, 1130, 1120]
-        },
-        {
-            "name": "Books",
-            "type": "bar",
-            "stack": "搜索引擎",
-            "emphasis": {
-                "focus": "series"
-            },
-            "data": [120, 132, 101, 134, 290, 230, 220]
-        },
-        {
-            "name": "Hoodies",
-            "type": "bar",
-            "stack": "搜索引擎",
-            "emphasis": {
-                "focus": "series"
-            },
-            "data": [60, 72, 71, 74, 190, 130, 110]
-        },
-        {
-            "name": "Bottles",
-            "type": "bar",
-            "stack": "搜索引擎",
-            "emphasis": {
-                "focus": "series"
-            },
-            "data": [62, 82, 91, 84, 109, 110, 120]
+            "data": [820, 832, 901, 934, 1290, 1330, 1320]
         }
     ]
 }

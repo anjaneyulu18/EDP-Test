@@ -64,3 +64,49 @@ font-size:17px;
         height: 43px;
         width: 118px;
 }
+
+
+li{
+   
+    display:block;  
+}
+ .abcd li{
+     display: inline;
+     padding:2rem;
+     color: #0F3756;
+     
+ }
+#abcde{
+    margin: 0 auto;
+  text-align: center;
+ }
+
+
+::ng-deep .mat-expansion-panel{
+    display: none;
+}
+.dropDOwnFontColorStyle{
+    color: black;
+}
+.mat-expansion-indicator {
+    position: absolute;
+    left: 15px;
+  }
+
+.mat-tab-body-content {
+    height: 100%;
+    overflow: hidden !important;
+}
+// style for center of li elements in header
+ .items li{
+     display: inline;
+     padding:2rem;
+     color: #0F3756;
+         float: left;
+    font-size: 14px;
+     
+ }
+#topnav{
+    margin: 0 auto;
+  text-align: center;
+ }

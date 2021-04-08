@@ -54,7 +54,6 @@ import {MatSortModule} from '@angular/material/sort';
     MatCardModule,MatSidenavModule,MatSliderModule,MatMenuModule,MatListModule,MatFormFieldModule,HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
     MatSidenavModule,

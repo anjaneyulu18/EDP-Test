@@ -14,21 +14,102 @@ export class AppComponent {
   sidenavWidth = 4;
   // ngStyle: string;
   openFlag = 0
-  public SchoolsArr = [{ "value": "" }, { "value": "Deeksha school" }, { "value": "New horizon school" }, { "value": "Oxford school" }, { "value": "Standford school" }, { "value": "Daccan school" }, { "value": "CBIT school" }]
+  public SchoolsArr = [ { "value": "Deeksha school" }, { "value": "New horizon school" }, { "value": "Oxford school" }, { "value": "Standford school" }, { "value": "Daccan school" }, { "value": "CBIT school" }]
   public Category = [{ "value": "Bags" }, { "value": "Uniform" }, { "value": "Books" }, { "value": "shoes" }, { "value": "tabs" }, { "value": "bottles" }]
-  public ListArr = [{ "value": "Yearly" }, { "value": "Half Yearly" }, { "value": "Quarterly" }, { "value": "Monthly" }, { "value": "Weekly" }, { "value": "Today" }, { "value": "Date Range" }]
+  public DateFilters = [{ "value": "Yearly" }, { "value": "Half Yearly" }, { "value": "Quarterly" }, { "value": "Monthly" }, { "value": "Weekly" }, { "value": "Today" }, { "value": "Date Range" }]
   public FullfillmentArr = [{
-    "value": "cancel"
+    "value": "Created"
   }, {
-    "value": "Return"
+    "value": "Packed"
+  },{
+    "value": "shipped"
+  },{
+    "value": "cancelled"
+  },{
+    "value": "reattempt"
+  },{
+    "value": "Failed"
   }, {
-    "value": "Pending"
+    "value": "delivered"
   }]
-
+  public inventoryArr=[{ "value": "Fast selling sku" }, { "value": "Low selling sku" }, { "value": "No inventory" }]
   constructor(public http: HttpClient) {
   }
   ngOnInit() {
     this.flag = 'Ar'
+     
+this.http.get("../assets/SlowsellingData.json").subscribe(Resp=>{
+  console.log("Inventory Data",Resp)
+var InventoryChartData:any
+InventoryChartData=Resp
+  var myChart4 = echarts.init((document.getElementById('InventoryChart')) as any);
+  var option4;
+  
+  option4 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // Use axis to trigger tooltip
+                type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+            }
+        },
+        legend: {
+            data: ['Direct', 'Mail Ad', 'Affiliate Ad', 'Video Ad', 'Search Engine']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value'
+        },
+        yAxis: InventoryChartData.yAxis,
+        series: InventoryChartData.series
+    };
+  
+  option4 && myChart4.setOption(option4);
+})
+    
+this.http.get("../assets/InventoryData.json").subscribe(Resp=>{
+  console.log("Inventory Data",Resp)
+var InventoryChartData:any
+InventoryChartData=Resp
+  var myChart3 = echarts.init((document.getElementById('lineChart2')) as any);
+  var option3;
+  
+  option3 = {
+    title: {
+        text: 'IV Status'
+        
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['Tabs', 'Shoes', 'Bags', 'Belts', 'Books']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+      show: true,
+      feature: {
+          saveAsImage: {show: true}
+      }
+  },
+    xAxis: InventoryChartData.xAxis,
+    yAxis: {
+        type: 'value'
+    },
+    series: InventoryChartData.series
+};
+  
+  option3 && myChart3.setOption(option3);
+})
     this.http.get("../assets/RevenueData.Json").subscribe(Resp => {
       console.log("Revenue Data", Resp)
       var yAxirArr: any
@@ -37,7 +118,7 @@ export class AppComponent {
       var option2;
       option2 = {
         title: {
-          text: 'Revenue Data By Month'
+          // text: 'Revenue Data By Month'
         },
 
         
@@ -116,6 +197,7 @@ export class AppComponent {
     })
 
   }
+  
   activeTab(value: any) {
     this.flag = value
   }

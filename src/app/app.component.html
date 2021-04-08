@@ -1,232 +1,314 @@
-<mat-sidenav-container fullscreen autosize >
- 
-  <mat-sidenav  #sidenav style="background-color:#0F3756;"   mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true">
+<mat-sidenav-container fullscreen autosize>
+
+  <mat-sidenav #sidenav style="background-color:#0F3756;" mode="side" class="example-sidenav"
+    [ngStyle]="{ 'width.em': sidenavWidth }" opened="true">
     <mat-nav-list>
-     <mat-list-item style="height: 64px;" >
-        <mat-icon class="navbar-btn " style="background-color: transparent; color: white;" (click)="increase()">menu</mat-icon>
+      <mat-list-item style="height: 64px;">
+        <mat-icon class="navbar-btn " style="background-color: transparent; color: white;" (click)="increase()">menu
+        </mat-icon>
       </mat-list-item>
-     <div>
-      <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Ar') ? 'primary' : 'secondary'" (click)="activeTab('Ar')" >
-        <mat-icon   [ngClass]=" (flag=='Ar') ? 'Icon' : 'secondary'">home</mat-icon>&nbsp;&nbsp; <span  style="font-size: 24px;"   *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Ar') ? 'font' : 'secondary'">Dashboard</span>
-      </mat-list-item >
-      <mat-list-item style="height: 64px; " [ngClass]=" (flag=='Kc') ? 'primary' : 'secondary'" (click)="activeTab('Kc')" >
-        <mat-icon [ngClass]=" (flag=='Kc') ? 'Icon' : 'secondary'"> directions_walk</mat-icon> &nbsp;&nbsp; <span *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Kc') ? 'font' : 'secondary'">Revenue</span>
-      </mat-list-item >
-      <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Ts') ? 'primary' : 'secondary'" (click)="activeTab('Ts')">
-        <mat-icon [ngClass]=" (flag=='Ts') ? 'Icon' : 'secondary'">flight_takeoff</mat-icon>&nbsp;&nbsp; <span  *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Ts') ? 'font' : 'secondary'">Key Coustomers</span>
-      </mat-list-item >
-      <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Ss') ? 'primary' : 'secondary'" (click)="activeTab('Ss')">
-        <mat-icon [ngClass]=" (flag=='Ss') ? 'Icon' : 'secondary'">flight_land</mat-icon>&nbsp;&nbsp; <span  *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Ss') ? 'font' : 'secondary'">Top Selleing Items </span>
-      </mat-list-item >
-      <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Is') ? 'primary' : 'secondary'" (click)="activeTab('Is')">
-        <mat-icon [ngClass]=" (flag=='Is') ? 'Icon' : 'secondary'">folder</mat-icon>&nbsp;&nbsp; <span  *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Is') ? 'font' : 'secondary'">Inventory Status</span>
-      </mat-list-item >
-      <!-- <mat-list-item style="height: 64px;" [ngClass]=" (flag=='FF') ? 'primary' : 'secondary'" (click)="activeTab('FF')">
+      <div>
+        <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Ar') ? 'primary' : 'secondary'"
+          (click)="activeTab('Ar')">
+          <mat-icon [ngClass]=" (flag=='Ar') ? 'Icon' : 'secondary'">home</mat-icon>&nbsp;&nbsp; <span
+            style="font-size: 24px;" *ngIf="sidenavWidth > 6"
+            [ngClass]=" (flag=='Ar') ? 'font' : 'secondary'">Dashboard</span>
+        </mat-list-item>
+        <mat-list-item style="height: 64px; " [ngClass]=" (flag=='Kc') ? 'primary' : 'secondary'"
+          (click)="activeTab('Kc')">
+          <mat-icon [ngClass]=" (flag=='Kc') ? 'Icon' : 'secondary'"> directions_walk</mat-icon> &nbsp;&nbsp; <span
+            *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Kc') ? 'font' : 'secondary'">Revenue</span>
+        </mat-list-item>
+        <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Ts') ? 'primary' : 'secondary'"
+          (click)="activeTab('Ts')">
+          <mat-icon [ngClass]=" (flag=='Ts') ? 'Icon' : 'secondary'">flight_takeoff</mat-icon>&nbsp;&nbsp; <span
+            *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Ts') ? 'font' : 'secondary'">Key Coustomers</span>
+        </mat-list-item>
+        <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Ss') ? 'primary' : 'secondary'"
+          (click)="activeTab('Ss')">
+          <mat-icon [ngClass]=" (flag=='Ss') ? 'Icon' : 'secondary'">flight_land</mat-icon>&nbsp;&nbsp; <span
+            *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Ss') ? 'font' : 'secondary'">Top Selleing Items </span>
+        </mat-list-item>
+        <mat-list-item style="height: 64px;" [ngClass]=" (flag=='Is') ? 'primary' : 'secondary'"
+          (click)="activeTab('Is')">
+          <mat-icon [ngClass]=" (flag=='Is') ? 'Icon' : 'secondary'">folder</mat-icon>&nbsp;&nbsp; <span
+            *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Is') ? 'font' : 'secondary'">Inventory Status</span>
+        </mat-list-item>
+        <!-- <mat-list-item style="height: 64px;" [ngClass]=" (flag=='FF') ? 'primary' : 'secondary'" (click)="activeTab('FF')">
         <mat-icon [ngClass]=" (flag=='FF') ? 'Icon' : 'secondary'">brightness_medium</mat-icon>&nbsp;&nbsp; <span  *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='FF') ? 'font' : 'secondary'">Full Filment Status</span>
       </mat-list-item > -->
-     </div>
+      </div>
       <!-- <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
 
     </mat-nav-list>
 
- 
+
 
   </mat-sidenav>
 
-  <mat-toolbar class="main-sec" >
+  <mat-toolbar class="main-sec">
     <mat-toolbar-row class="header">
       <img class="logo" src="../assets/images/logo.png">
-          <span class="example-spacer"></span>
-      <div>
-        <!-- <mat-icon class="example-icon">account_circle</mat-icon>
-      <mat-icon class="example-icon">arrow_drop_down</mat-icon> -->
+      <span class="example-spacer"></span>
+      <div id="topnav">
+        <ul class="items mx-5">
+          <li>TEAM</li>
+          <li>REPORTS</li>
+          <li>HELP</li>
+        </ul>
       </div>
-  
+
+
     </mat-toolbar-row>
+
   </mat-toolbar>
-  
+
   <div style="margin-top: 20px;" class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-2 col-sm-4 col-md-4 col-xs-12">
         <mat-card class="h-g">
-        <mat-card-title class="text-center"> ₹ 42,853</mat-card-title>    
-        <span style="font-size: xxx-large;
+          <mat-card-title class="text-center"> ₹ 42,853</mat-card-title>
+          <span style="font-size: xxx-large;
         color: orange;" class="material-icons">
-          people_alt
+            people_alt
           </span>
         </mat-card>
       </div>
       <div class="col-12 col-lg-2 col-sm-4 col-md-4 col-xs-12">
         <mat-card class="h-g">
-        <mat-card-title class="text-center"> 234</mat-card-title>
-        <span style="font-size: xxx-large;
+          <mat-card-title class="text-center"> 234</mat-card-title>
+          <span style="font-size: xxx-large;
         color: orange;" class="material-icons">
-          people_alt
+            people_alt
           </span>
-          
+
         </mat-card>
       </div>
       <div class="col-12 col-lg-2 col-sm-4 col-md-4 col-xs-12">
-        <mat-card class="h-g"> 
-        <mat-card-title  class="text-center" > 50</mat-card-title>
-        <span style="font-size: xxx-large;
+        <mat-card class="h-g">
+          <mat-card-title class="text-center"> 50</mat-card-title>
+          <span style="font-size: xxx-large;
         color: green;" class="material-icons">
-          trending_up
+            trending_up
           </span>
-          
+
         </mat-card>
       </div>
       <div class="col-12 col-lg-2 col-sm-4 col-md-4 col-xs-12">
         <mat-card class="h-g">
-        <mat-card-title class="text-center"> 23</mat-card-title>
-        <span style="font-size: xxx-large;
+          <mat-card-title class="text-center"> 23</mat-card-title>
+          <span style="font-size: xxx-large;
         color: red;" class="material-icons">
-          trending_down
+            trending_down
           </span>
-          
+
         </mat-card>
       </div>
       <div class="col-12 col-lg-2 col-sm-4 col-md-4 col-xs-12">
         <mat-card class="h-g">
-        <mat-card-title class="text-center"> --</mat-card-title>
+          <mat-card-title class="text-center"> --</mat-card-title>
           <span style="font-size: 104px;
           color: green;">.</span>
-          
-        </mat-card >
+
+        </mat-card>
       </div>
       <div class="col-12 col-lg-2 col-sm-4 col-md-4 col-xs-12">
         <mat-card class="h-g">
-        <mat-card-title class="text-center"> --</mat-card-title>
-        <span style="font-size: 104px;
+          <mat-card-title class="text-center"> --</mat-card-title>
+          <span style="font-size: 104px;
         color: red;">.</span>
-          
+
         </mat-card>
       </div>
     </div>
-    <div class="container-fluid">
-      <div style="margin-top: 25px;" class="row">
+  </div>
+  <div class="container-fluid">
+    <div style="margin-top: 25px;" class="row">
       <div class="col-9 col-xs-9 col-md-9  col-lg-9 col-xl-9">
         <mat-card style="height: 760px;">
           <h2>Main Taitle For The Visualisation</h2>
+          <mat-divider></mat-divider>
           <div class="container-fluid">
-             <div class="row">
-               <div class="col-11">
-                 <div class="poss">
-                <div  class="container-fluid" id="stackedChart" style="width:100%; height: 600px; display: block">
+            <div class="row">
+              <div class="col-11">
+
+                <div id="stackedChart" style="height: 600px; display: block; overflow: auto;">
 
                 </div>
               </div>
-               </div>
-             </div>
+            </div>
           </div>
         </mat-card>
       </div>
       <div class="col-3 col-xs-3 col-md-3  col-lg-3 col-xl-3">
         <mat-card>
-          <h3>  <span  class="material-icons" id="filter_alt" > filter_alt &nbsp;&nbsp; </span>Dimensions</h3>
-          <mat-divider></mat-divider>
-          <div class="container-fluid">
-               
-            <br>
-                
-                  <mat-form-field appearance="outline">
-                    <mat-label>Date&Time</mat-label>
-                    <mat-select >
-                        <mat-option (change)="openedChange($event)" *ngFor="let Arr of ListArr" [value]="Arr.value">
-                            {{Arr.value}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field> <br>
-                <mat-form-field appearance="outline">
-                  <mat-label>From Date</mat-label>
-                 
-                  <input matInput [matDatepicker]="picker">
-                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                  <mat-datepicker #picker></mat-datepicker>
-                
-              </mat-form-field><br>
-              <mat-form-field appearance="outline">
-                  <mat-label>To Date</mat-label>
-                
-                  <input matInput [matDatepicker]="picker2">
-                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                  <mat-datepicker #picker2></mat-datepicker>
-                
-              </mat-form-field> <br>
-                <mat-form-field appearance="outline">
-                    <mat-label>Schools List</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let Schools of SchoolsArr" [value]="Schools.value">
-                            {{Schools.value}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field> <br>
-                <mat-form-field appearance="outline">
-                    <mat-label>Category</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let list of Category" [value]="list.value">
-                            {{list.value}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field> <br>
-                
-                <mat-form-field appearance="outline">
-                  <mat-label>Region</mat-label>
-                  <mat-select>
-                      <mat-option *ngFor="let Schools of SchoolsArr" [value]="Schools.value">
-                          {{Schools.value}}
-                      </mat-option>
-                  </mat-select>
-              </mat-form-field> <br>
-              <mat-form-field appearance="outline">
-                <mat-label>Fullfillment</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let Schools of FullfillmentArr" [value]="Schools.value">
-                        {{Schools.value}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field> <br>
-            <mat-form-field appearance="outline">
-              <mat-label>Inventory</mat-label>
-              <mat-select>
-                  <mat-option *ngFor="let Schools of SchoolsArr" [value]="Schools.value">
-                      {{Schools.value}}
-                  </mat-option>
-              </mat-select>
-          </mat-form-field> 
+          <h3> <mat-tab-group>
+                <mat-tab> 
+                  <ng-template mat-tab-label>
+                    <span class="material-icons" id="filter_alt">
+                      filter_alt &nbsp; </span>  Dimensions
+                  </ng-template>
+                  <mat-expansion-panel class="mat-elevation-z0" [togglePosition]="'after'" >
+
+                    <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
+                      <mat-panel-title class="click-head">
+                        Date&Time Filters
+                      </mat-panel-title>
+        
+                      <!-- <mat-panel-description class="pannel-desc">
+                              Avarage Revenue By Rajaji Nagar (2019-2020)
+                          </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <li class="filters1">
+                      <ul class="submenu">
+                        <li *ngFor="let menu of DateFilters; let i = index">
+                          <input type="checkbox" class="mx-3" value="Car">
+                          <a >{{ menu.value }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </mat-expansion-panel>
+        
+                  <mat-expansion-panel class="mat-elevation-z0">
+                    <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
+                      <mat-panel-title class="click-head">
+                        Region
+                      </mat-panel-title>
+                      <!-- <mat-panel-description class="pannel-desc">
+                            Avarage Revenue By Rajaji Nagar (2019-2020)
+                        </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <li class="filters1">
+                      <ul class="submenu">
+                        <li *ngFor="let menu of DateFilters; let i = index">
+                          <input type="checkbox" class="mx-3" value="Car">
+                          <a >{{ menu.value }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </mat-expansion-panel>
+        
+                  <mat-expansion-panel class="mat-elevation-z0">
+                    <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
+                      <mat-panel-title class="click-head">
+                        Category Code
+                      </mat-panel-title>
+                      <!-- <mat-panel-description class="pannel-desc">
+                          Avarage Revenue By Rajaji Nagar (2019-2020)
+                      </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <li class="filters1">
+                      <ul class="submenu">
+                        <li *ngFor="let menu of Category; let i = index">
+                          <input type="checkbox" class="mx-3" value="Car">
+                          <a >{{ menu.value }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </mat-expansion-panel>
+        
+                  <mat-expansion-panel class="mat-elevation-z0">
+                    <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
+                      <mat-panel-title class="click-head">
+                        Schools
+                      </mat-panel-title>
+                      <!-- <mat-panel-description class="pannel-desc">
+                        Avarage Revenue By Rajaji Nagar (2019-2020)
+                    </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <li class="filters1">
+                      <ul class="submenu">
+                        <li *ngFor="let menu of SchoolsArr; let i = index">
+                          <input type="checkbox" class="mx-3" value="Car">
+                          <a >{{ menu.value }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </mat-expansion-panel>
+        
+                  <mat-expansion-panel class="mat-elevation-z0">
+                    <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
+                      <mat-panel-title class="click-head">
+                        Fullfillment status
+                      </mat-panel-title>
+                      <!-- <mat-panel-description class="pannel-desc">
+                      Avarage Revenue By Rajaji Nagar (2019-2020)
+                  </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <li class="filters1">
+                      <ul class="submenu">
+                        <li *ngFor="let menu of FullfillmentArr; let i = index">
+                          <input type="checkbox" class="mx-3" value="Car">
+                          <a >{{ menu.value }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </mat-expansion-panel>
+        
+                  <mat-expansion-panel id="filters1" class="mat-elevation-z0 ">
+                    <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
+                      <mat-panel-title class="click-head">
+                        Inventory status
+                      </mat-panel-title>
+                      <!-- <mat-panel-description class="pannel-desc">
+                    Avarage Revenue By Rajaji Nagar (2019-2020)
+                </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <li >
+                      <ul class="submenu">
+                        <li  *ngFor="let menu of inventoryArr; let i = index">
+                          <input type="checkbox" class="mx-3" value="Car">
+                          <a >{{ menu.value }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </mat-expansion-panel>
+                  <div class="row">
+                    <div class="col-5 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xs-12">
+                      <button mat-button class="btnA btn-outline-warnings ">Clear </button>
+        
+                    </div>
+                    <div class="col-5 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xs-12">
+                      <button mat-button class="btnA btn-mdb-color">Apply</button>
+                    </div>
+        
+                  </div>
+                </mat-tab>
+              
+                <mat-tab>
+                  <ng-template mat-tab-label>
+                    Mesures
+                  </ng-template>
+                  Content 2
+                </mat-tab>
+              </mat-tab-group></h3>
           
-               
-            <div class="row">
-              <div class="col-12">
-                <button mat-button class="btnA btn-outline-warnings mx-3">Clear </button>
-                <button mat-button class="btnA btn-mdb-color">Apply</button>
 
-              </div>
-            </div>
-
-            <!-- </div> -->
-
-    </div>
-      
         </mat-card>
       </div>
     </div>
-  </div>
-  </div>
-  <div style="margin-top: 20px;" class="container-fluid">
-    <div class="row">    
-      <div class="col-12 col-lg-5 col-xl-5">
-     <mat-card>
-       <h2>Main Taitle For The Visualisation</h2>
-     </mat-card>
-   </div>
- 
-   <div class="col-12 col-lg-5 col-xl-5">
-     <mat-card>
-       <h2>Main Taitle For The Visualisation</h2>
-     </mat-card>
-   </div></div>  
-  </div>
-<!-- </div> -->
-</mat-sidenav-container>
 
+
+    <div style="margin-top: 20px;">
+      <div class="row">
+        <div class="col-12 col-xs-12 col-md-12 col-sm-12 col-lg-5 col-xl-5">
+          <mat-card>
+            <h2>Main Taitle For The Visualisation</h2>
+            <div id="lineChart2" style=" height: 550px; display: block; overflow: auto;">
+
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-12 col-xs-12 col-md-12 col-sm-12 col-lg-4 col-xl-4">
+          <mat-card>
+            <h2>Main Taitle For The Visualisation</h2>
+            <div id="InventoryChart" style=" height: 550px; display: block; overflow: auto;">
+
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+</mat-sidenav-container>
