@@ -4,12 +4,9 @@
 background-color:white;
 
 }
-// .main-sec{
-//     margin-top: 5px;
-// }
+
 .logo{
 height: 4em;
-// margin-left: 180px;
 }
 .main-sec{
     display: flex;
@@ -100,7 +97,7 @@ li{
 // style for center of li elements in header
  .items li{
      display: inline;
-     padding:2rem;
+     padding:2.5rem;
      color: #0F3756;
          float: left;
     font-size: 14px;
@@ -116,4 +113,11 @@ mat-panel-title{
 }
 span:hover{
     color: #fff;
+}
+.txt-c{
+    color: #0F3756;
+    font-weight: 500; 
+}
+.p-s{
+    font-size: 13px;
 }

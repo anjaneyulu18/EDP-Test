@@ -17,6 +17,7 @@ export class AppComponent {
   public SchoolsArr = [ { "value": "Deeksha school" }, { "value": "New horizon school" }, { "value": "Oxford school" }, { "value": "Standford school" }, { "value": "Daccan school" }, { "value": "CBIT school" }]
   public Category = [{ "value": "Bags" }, { "value": "Uniform" }, { "value": "Books" }, { "value": "shoes" }, { "value": "tabs" }, { "value": "bottles" }]
   public DateFilters = [{ "value": "Yearly" }, { "value": "Half Yearly" }, { "value": "Quarterly" }, { "value": "Monthly" }, { "value": "Weekly" }, { "value": "Today" }, { "value": "Date Range" }]
+  public locationFilters = [{"value":"North"},{"value":"East"},{"value":"Weast"},{"value":"South India"}];
   public FullfillmentArr = [{
     "value": "Created"
   }, {
