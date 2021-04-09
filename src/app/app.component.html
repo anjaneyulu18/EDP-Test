@@ -145,18 +145,15 @@
           <div class="container-fluid">
             <mat-card-title class="txt-c text-center"> --
             </mat-card-title>
-           <div class="row mt-3">
-             <div class="col-3">
-            <mat-icon style="font-size: xxx-large;
-            color: green;"></mat-icon>
-            </div>
-            <div class="col-9 mt-3 ml-2">
-            <h5 class="txt-c p-s">Inventory</h5>
-            </div>
-           
+            <div class="row mt-4">
+              <div class=" col-2 ">
+               <img src="../assets/images/Icon awesome-warehouse.png" alt="">
+             </div>
+             <div class="col-10 mt-1">
+            <h5 class="txt-c p-s"> Inventory</h5>
+             </div>
           
-          
-            </div>
+             </div>
           </div>
           </mat-card>
       </div>
@@ -165,18 +162,15 @@
           <div class="container-fluid">
             <mat-card-title class="txt-c text-center"> --
             </mat-card-title>
-           <div class="row mt-3">
-             <div class="col-3">
-            <mat-icon style="font-size: xxx-large;
-            color: red;"></mat-icon>
-            </div>
-            <div class="col-9 mt-3 ml-2">
-            <h5 class="txt-c p-s">Full Filment Status</h5>
-            </div>
-           
+            <div class="row mt-3">
+              <div class="col-2  mx-1">
+               <img  src="../assets/images/Group 5264.png" alt="">
+             </div>
+             <div  class="col-9 mt-2">
+            <h5 class="txt-c p-s"> Full Filment Status </h5>
+             </div>
           
-          
-            </div>
+             </div>
           </div>
           </mat-card>
       </div>
@@ -314,18 +308,22 @@
                       <img class="mt-1 mx-2" style="height:max-content;" src="../assets/images/filter_icons/Icon awesome-school.png" alt="">
                       Schools
                     </mat-panel-title>
-                    <!-- <mat-panel-description class="pannel-desc">
-                          Avarage Revenue By Rajaji Nagar (2019-2020)
-                      </mat-panel-description> -->
                   </mat-expansion-panel-header>
-                  <li class="filters1">
-                    <ul class="submenu">
-                      <li *ngFor="let menu of SchoolsArr; let i = index">
-                        <input type="checkbox" class="mx-3 mb-3" value="Car">
-                        <a>{{ menu.value }}</a>
-                      </li>
-                    </ul>
-                  </li>
+                  <form class="example-form">
+                    <mat-form-field appearance="outline" class="example-full-width">
+                      <mat-label>Search</mat-label>
+                      <input type="text"
+                             placeholder="Schools List"
+                             aria-label="Number"
+                             matInput
+                             [matAutocomplete]="auto">
+                      <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of SchoolsList">
+                          {{option}}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
                 </mat-expansion-panel>
                 <mat-expansion-panel class="mat-elevation-z0">
                   <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
@@ -337,16 +335,41 @@
                             Avarage Revenue By Rajaji Nagar (2019-2020)
                         </mat-panel-description> -->
                   </mat-expansion-panel-header>
-                  <li class="filters1">
-                    <ul class="submenu">
-                      <li *ngFor="let menu of Category; let i = index">
-                        <input type="checkbox" class="mx-3 mb-3" value="Car">
-                        <a>{{ menu.value }}</a>
-                      </li>
-                    </ul>
-                  </li>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Products</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let Schools of SchoolsArr" [value]="Schools.value">
+                          {{Schools.value}}
+                           
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> 
+                <mat-form-field appearance="outline">
+                  <mat-label>Product Type</mat-label>
+                  <mat-select>
+                      <mat-option >
+                         
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field> 
+              <mat-form-field appearance="outline">
+                <mat-label>Items</mat-label>
+                <mat-select>
+                    <mat-option >
+                       
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> 
+            <mat-form-field appearance="outline">
+              <mat-label>Gender</mat-label>
+              <mat-select>
+                  <mat-option >
+                     
+                  </mat-option>
+              </mat-select>
+          </mat-form-field> 
                 </mat-expansion-panel>
-
+<!-- 
                 <mat-expansion-panel class="mat-elevation-z0">
                   <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
                     <mat-panel-title class="click-head">
@@ -362,9 +385,9 @@
                       </li>
                     </ul>
                   </li>
-                </mat-expansion-panel>
+                </mat-expansion-panel> -->
 
-                <mat-expansion-panel id="filters1" class="mat-elevation-z0 ">
+                <!-- <mat-expansion-panel id="filters1" class="mat-elevation-z0 ">
                   <mat-expansion-panel-header class="grap-head dropDOwnFontColorStyle">
                     <mat-panel-title class="click-head">
                       Inventory status
@@ -379,7 +402,7 @@
                       </li>
                     </ul>
                   </li>
-                </mat-expansion-panel>
+                </mat-expansion-panel> -->
                <div class="container"> 
                 <div class="row">
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xs-12 mt-3">

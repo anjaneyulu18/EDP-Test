@@ -37,6 +37,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSortModule} from '@angular/material/sort';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
 
 
 
@@ -77,6 +79,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatNativeDateModule,
     MatExpansionModule,
     MatSortModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
