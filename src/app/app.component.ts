@@ -8,12 +8,12 @@ import { HttpClient } from "@angular/common/http"
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  panelOpenState=false
   title = 'VendorDashbord';
   flag: any
   sidenavWidth = 4;
   // ngStyle: string;
-  openFlag = 0
+  openFlag = 0 
   public SchoolsArr = [ { "value": "Deeksha school" }, { "value": "New horizon school" }, { "value": "Oxford school" }, { "value": "Standford school" }, { "value": "Daccan school" }, { "value": "CBIT school" }]
   public Category = [{ "value": "Bags" }, { "value": "Uniform" }, { "value": "Books" }, { "value": "shoes" }, { "value": "tabs" }, { "value": "bottles" }]
   public DateFilters = [{ "value": "Yearly" }, { "value": "Half Yearly" }, { "value": "Quarterly" }, { "value": "Monthly" }, { "value": "Weekly" }, { "value": "Today" }]
@@ -33,13 +33,18 @@ export class AppComponent {
   }, {
     "value": "delivered"
   }]
-  public SchoolsList = [{"value":""},{"value":""},{"value":""},{"value":""},{"value":""},{"value":""},{"value":""}]
+public ProductsList = [{"value":"Uniform"},{"value":"Shoes"},{"value":"Books"},{"value":"Stationery"},{"value":"Accessories"},{"value":"Electronics"},{"value":"Services"}]
+public ProductType = [{"value":"Formal"},{"value":"Sports"},{"value":"Socks"},{"value":"Text Books"},{"value":"Note books"},{"value":"Kit"},{"value":"Belts"},{"value":"Ties"},{"value":"Bloomers"},{"value":"Bags"},{"value":"Mask"},{"value":"Fitness Product"},{"value":"Tabs"},{"value":"Computers"},{"value":"Fees"}]
+public ProductItems = [{"value":"Sweaters"},{"value":"Coat"},{"value":"Skirt"},{"value":"Frock"},{"value":"Top"},{"value":"Pinafore"},{"value":"Jacket"},{"value":"Pants"},{"value":"Shirts"},{"value":"Work Book"},{"value":"Record Book"},{"value":"Reading Program Fees"},{"value":"Assessment Fees  "},{"value":"Lab Fees"}]
+public PGender = [{"value":"Male"},{"value":"Female"},{"value":"Unisex"}]
+public SchoolsList = [{"value":""},{"value":""},{"value":""},{"value":""},{"value":""},]
+
   public inventoryArr=[{ "value": "Fast selling sku" }, { "value": "Low selling sku" }, { "value": "No inventory" }]
   constructor(public http: HttpClient) {
   }
   ngOnInit() {
     this.flag = 'Ar'
-     
+     this. panelOpenState = true
 this.http.get("../assets/SlowsellingData.json").subscribe(Resp=>{
   console.log("Inventory Data",Resp)
 var InventoryChartData:any

@@ -97,15 +97,19 @@ li{
 // style for center of li elements in header
  .items li{
      display: inline;
-     padding:2.5rem;
+     padding:1.4rem;
      color: #0F3756;
          float: left;
     font-size: 14px;
      
  }
 #topnav{
-    margin: 0 auto;
+    margin:auto;
   text-align: center;
+ }
+ #txt-al{
+    margin:auto;
+  text-align: right;
  }
 mat-panel-title{
     font-weight: 500;
