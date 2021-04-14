@@ -1,25 +1,43 @@
+[{
+    "kpoTitle":"Total Revenue",
+    "kpoValue": "1,56,94,636",
+    "imgPath": "../assets/images/Group 5263.png"
+},
 {
-    "series": [
-        {
-            "name": "面积模式",
-            "type": "pie",
-            "radius": [50, 250],
-            "center": ["50%", "50%"],
-            "roseType": "area",
-            "itemStyle": {
-                "borderRadius": 8
-            },
-            "data": [
-                {"value": 40, "name": "Deeksha"},
-                {"value": 38, "name": "HSR"},
-                {"value": 32, "name": "Marthahalli"},
-                {"value": 30, "name": "Rajaji Nagar"},
-                {"value": 28, "name": "Silk bord"},
-                {"value": 26, "name": "KPHB"},
-                {"value": 22, "name": "Hi-Tech City"},
-                {"value": 18, "name": "MG Road"}
-            ]
-        }
-    ]
-    
-}
+    "kpoTitle":"Total Coustomers",
+    "kpoValue": "5,636",
+    "imgPath": "../assets/images/Icon feather-users.png"
+
+},
+{
+    "kpoTitle":"Total Schools",
+    "kpoValue": "68",
+    "imgPath": "../assets/images/Icons - Trending - Up.png"
+},
+{
+    "kpoTitle":"Total Vendors",
+    "kpoValue": "88",
+    "imgPath": "../assets/images/Icons - Trending - Up-1.png"
+
+},
+
+{
+    "kpoTitle":"Total Orders",
+    "kpoValue": "24,636",
+    "imgPath": "../assets/images/Icon awesome-warehouse.png"
+},
+{
+    "kpoTitle":"Total no.of Pending Orders",
+    "kpoValue": "24,636",
+    "imgPath": ""
+},
+{
+    "kpoTitle":"Total no.of In-Transit Orders",
+    "kpoValue": "24,636",
+    "imgPath": ""
+},
+{
+    "kpoTitle":"Total no.of Delivered Orders",
+    "kpoValue": "24,636",
+    "imgPath": ""
+}]

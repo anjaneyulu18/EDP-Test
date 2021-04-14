@@ -1,0 +1,25 @@
+[{
+    "title":"Dashboard",
+    "imgPath":"home",
+    "flag":"Ds"
+},
+{
+    "title":"Revenue",
+    "imgPath":"account_balance",
+    "flag":"rv"
+},
+{
+    "title":"Key Coustomers",
+    "imgPath":"directions_walk",
+    "flag":"kc"
+},
+{
+    "title":"Top Selling Items",
+    "imgPath":"flight_land",
+    "flag":"tsi"
+},
+{
+    "title":"Inventory",
+    "imgPath":"folder",
+    "flag":"in"
+}]

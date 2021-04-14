@@ -1,4 +1,4 @@
-<mat-sidenav-container fullscreen autosize>
+<mat-sidenav-container  fullscreen autosize>
 
   <mat-sidenav #sidenav style="background-color:#0F3756;" mode="side" class="example-sidenav"
     [ngStyle]="{ 'width.em': sidenavWidth }" opened="true">
@@ -8,13 +8,13 @@
         </mat-icon>
       </mat-list-item>
       <div>
-        <mat-list-item class="mat" style="height: 64px;" [ngClass]=" (flag=='Ar') ? 'primary' : 'secondary'"
-          (click)="activeTab('Ar')">
-          <mat-icon [ngClass]=" (flag=='Ar') ? 'Icon' : 'secondary'">home</mat-icon>&nbsp;&nbsp; <span
-            style="font-size: 24px;" *ngIf="sidenavWidth > 6"
-            [ngClass]=" (flag=='Ar') ? 'font' : 'secondary'">Dashboard</span>
+        <mat-list-item *ngFor = "let sidenavData of sidenavArray"  class="mat" style="height: 64px;" [ngClass]=" (flag==sidenavData.flag) ? 'primary' : 'secondary'"
+          (click)="activeTab(sidenavData.flag)">
+          <mat-icon [ngClass]=" (flag==sidenavData.flag) ? 'Icon' : 'secondary'">{{sidenavData.imgPath}}</mat-icon>&nbsp;&nbsp; <span
+            style="font-size: 22px;" *ngIf="sidenavWidth > 6"
+            [ngClass]=" (flag==sidenavData.flag) ? 'font' : 'secondary'">{{sidenavData.title}}</span>
         </mat-list-item>
-        <mat-list-item style="height: 64px; " [ngClass]=" (flag=='Kc') ? 'primary' : 'secondary'"
+        <!-- <mat-list-item style="height: 64px; " [ngClass]=" (flag=='Kc') ? 'primary' : 'secondary'"
           (click)="activeTab('Kc')">
           <mat-icon [ngClass]=" (flag=='Kc') ? 'Icon' : 'secondary'"> directions_walk</mat-icon> &nbsp;&nbsp; <span
             *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Kc') ? 'font' : 'secondary'">Revenue</span>
@@ -33,7 +33,7 @@
           (click)="activeTab('Is')">
           <mat-icon [ngClass]=" (flag=='Is') ? 'Icon' : 'secondary'">folder</mat-icon>&nbsp;&nbsp; <span
             *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='Is') ? 'font' : 'secondary'">Inventory Status</span>
-        </mat-list-item>
+        </mat-list-item> -->
         <!-- <mat-list-item style="height: 64px;" [ngClass]=" (flag=='FF') ? 'primary' : 'secondary'" (click)="activeTab('FF')">
         <mat-icon [ngClass]=" (flag=='FF') ? 'Icon' : 'secondary'">brightness_medium</mat-icon>&nbsp;&nbsp; <span  *ngIf="sidenavWidth > 6" [ngClass]=" (flag=='FF') ? 'font' : 'secondary'">Full Filment Status</span>
       </mat-list-item > -->
@@ -90,8 +90,20 @@
             <div class="col-12">
               <mat-card>
 
-                <div class="row">
-                  <h3 style="color: #0F3756; font-weight: 500;">Selected Criteria</h3>
+                <div class="row mb-3" >
+                 <div class="col-7">
+                  <span style="color: #0F3756; font-weight: 500;font-size: 16px;">Selected Criteria</span> &nbsp; &nbsp;
+                 <button style="border: 1px solid orange; border-width: 2px;color: #0F3756;font-weight: 600;font-size: 13px;" class="btn btn-transparent mx-1">D</button>
+                  <button style="border: 1px solid gray; border-width: 2px;font-size: 10px;" class="btn btn-transparent">Today  x</button>
+                 
+                 </div>
+                 <div class="col-5">
+                  <!-- <span style="color: #0F3756; font-weight: 500;font-size: 16px;">Selected Criteria</span> &nbsp; &nbsp; -->
+                 <button style="border: 1px solid orange; border-width: 2px;color: #0F3756;font-weight: 600;font-size: 13px;" class="btn btn-transparent mx-1">M</button>
+                  <button style="border: 1px solid gray; border-width: 2px;font-size: 10px;" class="btn btn-transparent">Today  x</button>
+                 
+                 </div>
+                 
                 </div>
 
                 <mat-divider></mat-divider>
@@ -113,7 +125,7 @@
               <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xs-12 col-sm-12">
                 <mat-card>
                   <h2>Main Taitle For The Visualisation</h2>
-                  <div id="lineChart2" style=" height: 550px;width: auto; display: block; overflow:auto ;">
+                  <div id="lineChart2" style=" height: 550px;width: auto; display: block; overflow:auto; overflow-y: hidden;">
 
                   </div>
                 </mat-card>
@@ -121,7 +133,7 @@
               <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xs-12 col-sm-12">
                 <mat-card> 
                   <h2>Main Taitle For The Visualisation</h2>
-                  <div id="InventoryChart" style=" height: 550px;width: auto; display: block; overflow: auto;">
+                  <div id="InventoryChart" style=" height: 550px;width: auto; display: block; overflow: auto; overflow-y: hidden;">
 
                   </div>
                 </mat-card>

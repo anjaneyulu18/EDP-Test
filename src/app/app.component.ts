@@ -8,6 +8,8 @@ import { HttpClient } from "@angular/common/http"
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+sidenavArray:any;
   panelOpenState=false
   title = 'VendorDashbord';
   flag: any
@@ -43,6 +45,18 @@ public SchoolsList = [{"value":""},{"value":""},{"value":""},{"value":""},{"valu
   constructor(public http: HttpClient) {
   }
   ngOnInit() {
+// sidenav
+this.http.get("../assets/sidenavData.json").subscribe(Resp=>{
+  console.log("sidenav Data",Resp)
+  this.sidenavArray = Resp;
+  this.activeTab(this.sidenavArray[0].flag)
+})
+
+
+
+
+
+
     this.flag = 'Ar'
      this. panelOpenState = true
 this.http.get("../assets/SlowsellingData.json").subscribe(Resp=>{

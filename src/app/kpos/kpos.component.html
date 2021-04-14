@@ -1,29 +1,30 @@
-<div class="d-flex flex-row flex-nowrap overflow-auto">
-    <div style="min-width: 300px;"  class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
-   
-      <mat-card  class="h-g ">
-        <div class="container-fluid">
-          <mat-card-title class="txt-c text-center"> ₹ 4,56789
-          </mat-card-title>
-          <div class="row mt-4">
-            <div class=" col-2 mx-2 ">
-              <img src="../assets/images/Group 5263.png" alt="">
-            </div>
-            <div class="col-9 mt-2">
-              <h5 class="txt-c p-s">Revenue</h5>
-            </div>
 
-          </div>
-        </div>
-      </mat-card>
-
-    </div>
-    <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
-      <mat-card  class="h-g ">
-        <div class="container-fluid">
-          <mat-card-title class="txt-c text-center"> 234
-          </mat-card-title>
-          <div class="row mt-4">
+    <div class="d-flex flex-row flex-nowrap overflow-auto ">
+        <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3"
+            *ngFor="let data of CardsDAta; let i = index">
+    
+            <mat-card class="h-g mb-3">
+                <div class="container-fluid">
+                    <mat-card-title class="txt-c text-center"> {{data.kpoValue}}
+                    </mat-card-title>
+                    <div class="row mt-4">
+                        <div class=" col-2 mx-2 ">
+                            <img src={{data.imgPath}} alt="">
+                        </div>
+                        <div class="col-9 mt-2">
+                            <h5 class="txt-c p-s">{{data.kpoTitle}}</h5>
+                        </div>
+    
+                    </div>
+                </div>
+            </mat-card>
+</div>
+    <!-- <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
+        <mat-card class="h-g ">
+            <div class="container-fluid">
+                <mat-card-title class="txt-c text-center"> Total no. of Orders
+                </mat-card-title>
+        <div class="row mt-4">
             <div class=" col-2 mx-2">
               <img src="../assets/images/Icon feather-users.png" alt="">
             </div>
@@ -32,10 +33,10 @@
             </div>
 
           </div>
-        </div>
-      </mat-card>
-    </div>
-    <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
+            </div>
+        </mat-card>
+    </div> -->
+    <!-- <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
       <mat-card  class="h-g ">
         <div class="container-fluid">
           <mat-card-title class="txt-c text-center"> 45
@@ -61,6 +62,7 @@
             <div class=" col-2 ">
               <img src="../assets/images/Icons - Trending - Up-1.png" alt="">
             </div>
+            
             <div class="col-10 mt-1">
               <h5 class="txt-c p-s"> Slow Selling Items</h5>
             </div>
@@ -102,7 +104,6 @@
           </div>
         </div>
       </mat-card>
-    </div>
- 
+    </div> -->
 
-  </div>
+</div>
