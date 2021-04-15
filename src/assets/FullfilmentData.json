@@ -1,21 +1,25 @@
 [{
     "kpoTitle":"Total Revenue",
+    "kpoType":"INR",
     "kpoValue": "1,56,94,636",
     "imgPath": "../assets/images/Group 5263.png"
 },
 {
-    "kpoTitle":"Total Coustomers",
+    "kpoTitle":"Total Customers",
+    "kpoType":"value",
     "kpoValue": "5,636",
     "imgPath": "../assets/images/Icon feather-users.png"
 
 },
 {
     "kpoTitle":"Total Schools",
+    "kpoType":"value",
     "kpoValue": "68",
     "imgPath": "../assets/images/Icons - Trending - Up.png"
 },
 {
     "kpoTitle":"Total Vendors",
+    "kpoType":"value",
     "kpoValue": "88",
     "imgPath": "../assets/images/Icons - Trending - Up-1.png"
 
@@ -23,21 +27,13 @@
 
 {
     "kpoTitle":"Total Orders",
+    "kpoType":"value",
     "kpoValue": "24,636",
-    "imgPath": "../assets/images/Icon awesome-warehouse.png"
-},
-{
-    "kpoTitle":"Total no.of Pending Orders",
-    "kpoValue": "24,636",
-    "imgPath": ""
-},
-{
-    "kpoTitle":"Total no.of In-Transit Orders",
-    "kpoValue": "24,636",
-    "imgPath": ""
-},
-{
-    "kpoTitle":"Total no.of Delivered Orders",
-    "kpoValue": "24,636",
-    "imgPath": ""
+    "imgPath": "../assets/images/Icon awesome-warehouse.png",
+    "OrderData":{
+        "pending":"7845",
+        "inTransit":"525",
+        "Delivered":"8885"
+    }
+  
 }]

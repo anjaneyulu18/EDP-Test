@@ -1,41 +1,62 @@
 
     <div class="d-flex flex-row flex-nowrap overflow-auto ">
+      <div  *ngFor="let data of CardsDAta; let i = index">
         <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3"
-            *ngFor="let data of CardsDAta; let i = index">
+             *ngIf="!data['OrderData']">
     
-            <mat-card class="h-g mb-3">
+            <mat-card style="height: 120px;" class="h-g mb-3" >
                 <div class="container-fluid">
-                    <mat-card-title class="txt-c text-center"> {{data.kpoValue}}
+                    <mat-card-title class="txt-c  mx-5"><span *ngIf="data.kpoType == 'INR'">₹</span> {{data.kpoValue}}
                     </mat-card-title>
                     <div class="row mt-4">
-                        <div class=" col-2 mx-2 ">
-                            <img src={{data.imgPath}} alt="">
+                        <div class=" col-2  ">
+                            <img class="mx-2" src={{data.imgPath}} alt="">
                         </div>
                         <div class="col-9 mt-2">
-                            <h5 class="txt-c p-s">{{data.kpoTitle}}</h5>
+                            <h5 class="txt-c p-s mx-1">{{data.kpoTitle}}</h5>
                         </div>
-    
                     </div>
+                   
                 </div>
             </mat-card>
+          
 </div>
-    <!-- <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
-        <mat-card class="h-g ">
-            <div class="container-fluid">
-                <mat-card-title class="txt-c text-center"> Total no. of Orders
+</div>
+<div *ngFor="let data of CardsDAta; let i = index">
+    <div style="width: auto;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3"  *ngIf="data['OrderData']">
+        <mat-card style="height: 120px; width: 450px;" class="h-g "  >
+            <div class="container-fluid" >
+                <mat-card-title class="txt-c text-center mb-4">
+                  <span> {{data.kpoTitle}}:</span>
+                  {{data.kpoValue}}
                 </mat-card-title>
-        <div class="row mt-4">
-            <div class=" col-2 mx-2">
-              <img src="../assets/images/Icon feather-users.png" alt="">
-            </div>
-            <div class="col-9 mt-1 ">
-              <h5 class="txt-c p-s">Key Coustomers</h5>
-            </div>
-
-          </div>
+                <div class="container-fluid">
+                  <div class="row mt-2">
+                    <div class="col-4">
+                      <p class="card-font">{{data.OrderData.pending}}</p>
+                    </div><div class="col-4">
+                      <p class="card-font">{{data.OrderData.inTransit}}</p>
+                    </div><div class="col-4">
+                      <p class="card-font">{{data.OrderData.Delivered}}</p>
+                    </div>
+                    <div class="row">
+                    <div class="col-4">
+                      <p class="card-font">Pending </p>
+                    </div>
+                    <div class="col-4">
+                      <p class="card-font">In-Transit</p>
+                    </div>
+                    <div class="col-4">
+                      <p class="card-font">Delivered</p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                  
             </div>
         </mat-card>
-    </div> -->
+    </div>
+  </div>
     <!-- <div style="min-width: 300px;" class="col-12 col-lg-2 col-sm-4 col-md-2 col-xs-12 col-xl-2 mx-3">
       <mat-card  class="h-g ">
         <div class="container-fluid">

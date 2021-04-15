@@ -180,37 +180,7 @@ InventoryChartData=Resp
         ],
         series: yAxirArr.SeriesData
       };
-      
-      // option2 ={
-      //   tooltip: {
-      //       trigger: 'axis',
-      //       axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-      //           type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-      //       }
-      //   },
-      //   legend: {
-      //       data: ['Deeksha Store', 'Hyderabad Store', 'Rajaji Nagar Store']
-      //   },
-      //   grid: {
-      //       left: '3%',
-      //       right: '4%',
-      //       bottom: '3%',
-      //       containLabel: true
-      //   },
-      //   toolbox: {
-      //     show: true,
-      //     feature: {
-      //         saveAsImage: {show: true}
-      //     }
-      // },
-      //   xAxis: [
-      //       {
-      //           type: 'value'
-      //       }
-      //   ],
-      //   yAxis:yAxirArr.YAxis,
-      //   series: yAxirArr.SeriesData
-      // };
+     
       ;
 
       option2 && myChart2.setOption(option2);
